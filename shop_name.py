@@ -9,7 +9,7 @@ prompt_shop_name = ChatPromptTemplate.from_template(
 )
 
 prompt_related_items = ChatPromptTemplate.from_template(
-    "Tell me 5 related items or concepts to '{product}'."
+    "Tell me 5 related items or con0.cepts to '{product}'."
 )
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash-8b",

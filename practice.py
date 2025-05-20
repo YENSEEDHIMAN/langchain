@@ -102,19 +102,7 @@
 # print(f"volume of a circle is : {volume}")
 
 
-# # check number is prime or not
-# num_0 = int(input("Enter a number: "))
-# if num_0>1:
-#     for i in range(2,int(num_0**0.5)+1):
-#         if num_0%i == 0:
-#             print(f"{num_0} is not a prime number")
-#             break
-#         else:
-#             print(f"{num_0} is a prime number")
-# else:
-#         print(f"{num_0} is not a prime number")
-
-#Ascending Order Sort 
+# #Ascending Order Sort 
 input_str = input("Enter numbers separated by commas: ")
 numbers = [int(x.strip()) for x in input_str.split(',')]
 
@@ -123,5 +111,14 @@ for i in range(n):
     for j in range(0, n - i - 1):
         if numbers[j] > numbers[j + 1]:
             numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
-
 print("Sorted list:", numbers)
+
+
+#prime numbers
+num = int(input("enter the number: "))
+for i in range(2, num - 1): 
+    if num % i == 0:
+        print(f"{num} is Not prime")
+        break
+else:
+    print(f"{num} is Prime")

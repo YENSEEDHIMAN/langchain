@@ -102,23 +102,61 @@
 # print(f"volume of a circle is : {volume}")
 
 
-# #Ascending Order Sort 
-input_str = input("Enter numbers separated by commas: ")
-numbers = [int(x.strip()) for x in input_str.split(',')]
+# # #Ascending Order Sort 
+# input_str = input("Enter numbers separated by commas: ")
+# numbers = [int(x.strip()) for x in input_str.split(',')]
 
-n = len(numbers)
-for i in range(n):
-    for j in range(0, n - i - 1):
-        if numbers[j] > numbers[j + 1]:
-            numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
-print("Sorted list:", numbers)
+# n = len(numbers)
+# for i in range(n):
+#     for j in range(0, n - i - 1):
+#         if numbers[j] > numbers[j + 1]:
+#             numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+# print("Sorted list:", numbers)
 
 
-#prime numbers
-num = int(input("enter the number: "))
-for i in range(2, num - 1): 
-    if num % i == 0:
-        print(f"{num} is Not prime")
-        break
+# #prime numbers
+# num = int(input("enter the number: "))
+# for i in range(2, num - 1): 
+#     if num % i == 0:
+#         print(f"{num} is Not prime")
+#         break
+# else:
+#     print(f"{num} is Prime")
+
+
+# def count_vowels(str):
+#     vowels = "aeiouAEIOU"
+#     count = 0
+#     for char in str:
+#         if char in vowels:
+#             count += 1
+#     return count
+# string = str(input("Entrer a string: "))
+# print(count_vowels(string))
+
+
+# def reverse_number(num):
+#     reversed_num = 0
+#     while num > 0:
+#         digit = num % 10         # get last digit
+#         reversed_num = reversed_num * 10 + digit
+#         num = num // 10          # remove last digit
+#     return reversed_num
+
+# number = int(input("Enter a number: "))
+# print("Reversed number:", reverse_number(number))
+
+
+def is_palindrome(text):
+    n = len(text)
+    for i in range(n // 2):
+        if text[i] != text[n - i - 1]:
+            return False
+    return True
+
+word = input("Enter text: ")
+
+if is_palindrome(word):
+    print("Palindrome")
 else:
-    print(f"{num} is Prime")
+    print("Not a Palindrome ")
